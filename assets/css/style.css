@@ -1,6 +1,6 @@
 .jumbotron-jumbotron-fluid {
     background-color: burlywood;
-    height: 80%;
+    height: 85%;
     padding: 15px;
     margin: 20px;
     text-align: center;
@@ -9,9 +9,23 @@
 
 }
 
+button {
+    color: white;
+    background-color: blue;
+}
+
 .card-body {
     border: solid;
     border-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form {
+    font-display: initial;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
 }
 
 .card-header {

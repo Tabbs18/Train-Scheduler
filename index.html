@@ -11,7 +11,7 @@
     <title>Train-Scheduler</title>
 </head>
 
-<body>
+<body background="./assets/css/snow_train_station .jpg">
 
     <div class="container">
 
@@ -22,54 +22,67 @@
             </div>
         </div>
 
-        
-        <div class="col-md">
-                <div class="card card-default">
-                    <div class="card-header">
-                        current train time
-                    </div>
-                    <div class="card-body" id="recent-member">
-                        <h4 id="train-name-display"></h4>
-                        <h4 id="destination-display"></h4>
-                        <h4 id="train-time-display"></h4>
-                        <h4 id="freaquency-display"></h4>
+        <div class="row">
+
+            <div class="col-md-12">
+
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id='employee-table'>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="addTrain">
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
 
-        <div class="col-lg-6">
-            <div class="cards-card-default">
-                <div class="card-header">
-                    Add Train
-                </div>
-                <div class="card-body">
+            <div class="col-lg-6">
+                <div class="cards-card-default">
+                    <div class="card-header">
+                        Add Train
+                    </div>
+                    <div class="card-body">
 
-                    <!-- Sign-up Form (note the various input "types")-->
-                    <form role="form">
-                        <div class="form-group row">
-                            <label for="name-input">Train Name:</label>
-                            <input class="form-control" id="name-input" type="text">
-                        </div>
-                        <div class="form-group row">
-                            <label for="destination-input">Destination:</label>
-                            <input class="form-control" id="destination-input" type="text">
-                        </div>
-                        <div class="form-group row">
-                            <label for="time-input">First Train Time (Miltary Time):</label>
-                            <input class="form-control" id="time-input" type="number">
-                        </div>
-                        <div class="form-group row">
-                            <label for="frequency-input">Frequency (min)</label>
-                            <input class="form-control" id="frequency-input" type="number">
-                        </div>
-                        <button class="btn btn-default" id="add-user" type="submit">Submit</button>
-                    </form>
+                        <!-- Sign-up Form (note the various input "types")-->
+                        <form role="form">
+                            <div class="form">
+                                <div class="form-group row">
+                                    <label for="name-input">Train Name:</label>
+                                    <input class="form-control" id="name-input" type="text">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="destination-input">Destination:</label>
+                                    <input class="form-control" id="destination-input" type="text">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="time-input">First Train Time (Miltary Time):</label>
+                                    <input class="form-control" id="time-input" type="number">
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="frequency-input">Frequency (min)</label>
+                                    <input class="form-control" id="frequency-input" placeholder="13:00 Military">
+                                </div>
+                                <button class="btn btn-default" type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/java/train.js"></script>
 </body>
